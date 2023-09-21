@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import { Button, ConfigProvider } from "antd";
+
 
 
 
 const HomePage = () => (
 
   
-      <div>Home Index</div>
+      <div>Home Index 2</div>
 
  
 );

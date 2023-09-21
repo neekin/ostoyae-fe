@@ -1,6 +1,8 @@
+"use clinet";
 import { Inter } from "next/font/google";
 import StyledComponentsRegistry from "@/lib/antd-registry";
-
+import { ConfigProvider } from 'antd'
+import theme from "@/lib/themes/themeConfig";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,11 +13,13 @@ export const metadata = {
 
 import './globals.css'
 
+import PageLayout from "./components/page-layout";
 
 const RootLayout = ({ children }) => (
   <html lang="en">
     <body className={inter.className}>
-      <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+  
+      <StyledComponentsRegistry>  <ConfigProvider theme={theme}> <PageLayout>{children}</PageLayout> </ConfigProvider></StyledComponentsRegistry>
     </body>
   </html>
 );
